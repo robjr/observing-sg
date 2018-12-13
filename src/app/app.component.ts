@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public linksDisplayed = false;
   title = 'observing-sg';
+
+  public toggleLinksVisibility(): void {
+    this.linksDisplayed = !this.linksDisplayed;
+  }
 }
