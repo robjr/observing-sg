@@ -1,0 +1,43 @@
+<div class="columns">
+  <div class="column">
+    <button (click)="startAll()">forkJoin</button>
+    <ul>
+      <li *ngFor="let message of forkJoinMessages"> {{ message }}</li>
+    </ul>
+  </div>
+
+  <div class="column">
+    <button (click)="startAll()">race </button>
+    <ul>
+      <li *ngFor="let message of raceMessages"> {{ message }}</li>
+    </ul>
+  </div>
+
+  <div class="column">
+    <button (click)="startAll()">merge</button>
+    <ul>
+      <li *ngFor="let message of mergeMessages"> {{ message }}</li>
+    </ul>
+  </div>
+
+  <div class="column">
+    <button (click)="startAll()">concat</button>
+    <ul>
+      <li *ngFor="let message of concatMessages"> {{ message }}</li>
+    </ul>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column">
+    <p>flatMap (mergeMap),switchMap, concatMap</p>
+    <input type="text" placeholder="repo name" [formControl]="searchTerm">
+    <p>Total number of repos on github: {{ numberOfRepos }}</p>
+    <ul><li *ngFor="let message of subjectMessages"> {{ message }}</li></ul>
+  </div>
+  <div class="column">
+    <button id="fiveTimesButton">Press 5 times</button>x
+    <button id="anyTimeButton">Press</button>
+    <p>Result: {{ multiplicationResult }}</p>
+  </div>
+</div>
